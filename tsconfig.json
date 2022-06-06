@@ -6,11 +6,6 @@
       "DOM.Iterable",
       "ESNext"
     ],
-    "paths": {
-      "@": [
-        "src/*"
-      ]
-    },
     "types": ["vite/client"],
     "baseUrl": "src",
     "allowJs": false,

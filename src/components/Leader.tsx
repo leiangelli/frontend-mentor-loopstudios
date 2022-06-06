@@ -2,17 +2,20 @@ import React from 'react'
 
 // hooks
 import deviceInfo from 'hooks/device-info'
+import imagePc from './assets/images/desktop/image-interactive.jpg'
+import imageMb from './assets/images/mobile/image-interactive.jpg'
+
 
 function Leader () {
   const device = deviceInfo()
-  const deviceType = (device?.width ?? 0) > 991 ? 'desktop' : 'mobile'
+  const deviceWidth = device?.width ?? 0
   
   return (
     <div className="leader">
       <div className="l-inner">
         <img
-          src={`src/assets/images/${deviceType}/image-interactive.jpg`}
-          className="image-interactive"
+          src={ deviceWidth > 991 ?  imagePc : imageMb }
+          alt="image-interactive"
         />
 
         <section className="leader__detail">
