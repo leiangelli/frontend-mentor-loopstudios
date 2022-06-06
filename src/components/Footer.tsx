@@ -1,7 +1,7 @@
 import React from 'react'
 
 // components
-import Sitemap from '@/components/Sitemap'
+import Sitemap from 'components/Sitemap'
 
 function Footer () {
   return(

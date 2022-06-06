@@ -1,12 +1,12 @@
 import React from 'react'
 
 // hooks
-import deviceInfo from '@/hooks/device-info'
+import deviceInfo from 'hooks/device-info'
 
 function Leader () {
   const device = deviceInfo()
-  const deviceType = device.width > 991 ? 'desktop' : 'mobile'
-
+  const deviceType = (device?.width ?? 0) > 991 ? 'desktop' : 'mobile'
+  
   return (
     <div className="leader">
       <div className="l-inner">

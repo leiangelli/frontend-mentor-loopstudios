@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 // components
-import Nav from '@/components/Nav'
+import Nav from 'components/Nav'
 
 function Hero () {
   const html = document.querySelector('html')
