@@ -1,0 +1,167 @@
+@use "../abstracts" as *;
+
+$creations: (
+  "deep-earth",
+  "night-arcade",
+  "soccer-team",
+  "grid",
+  "from-above",
+  "pocket-borealis",
+  "curiosity",
+  "fisheye"
+);
+
+.creations {
+  margin-bottom: 96px;
+
+  @include mq(992px) {
+    margin-bottom: 185px;
+  }
+
+  h2 {
+    grid-column: 2 / span 4;
+    text-align: center;
+    font: {
+      size: em(32px);
+      weight: 300;
+    }
+    text-transform: uppercase;
+
+    @include mq(991px, max-width) {
+      margin-bottom: 48px;
+    }
+
+    @include mq(992px) {
+      grid-column: 2 / span 3;
+      text-align: left;
+      font-size: em(48px);
+    }
+  }
+}
+
+.creations__button {
+  @include wh(157px, 40px);
+  align-items: center;
+  border: solid 1px var(--black);
+  display: flex;
+  font-family: $SECONDARY_FONT;
+  font-size: em(14px);
+  grid-column: 2 / span 4;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.35s ease;
+  letter-spacing: 5px;
+
+  @include mq(991px, max-width) {
+    margin: 0 auto;
+  }
+
+  @include mq(992px) {
+    margin: {
+      left: auto;
+      right: -3px;
+      top: 3px;
+    }
+  }
+
+  &:before {
+    @include absolute(-25%, 0, 0, -10%);
+    @include wh(120%, 150%);
+    background-color: var(--black);
+    content: "";
+    display: block;
+    transform-origin: left;
+    transform: skew(-30deg) scaleX(0);
+    transition: transform 0.35s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: var(--white);
+
+    &:before {
+      transform: skew(-30deg) scaleX(1);
+    }
+  }
+
+  @include mq(992px) {
+    grid-column: 5;
+  }
+}
+
+.creations-list {
+  display: grid;
+  gap: 24px;
+  grid-column: 2 / span 4;
+
+  @include mq(991px, max-width) {
+    margin-bottom: 34px;
+  }
+
+  @include mq(992px) {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 79px;
+    gap: 32px;
+  }
+}
+
+.creations-list__item {
+  @include wh(max(256px, 100%), 120px);
+  align-items: flex-end;
+  cursor: pointer;
+  display: flex;
+  font-size: em(24px);
+  padding: 20px;
+  position: relative;
+
+  @include mq(992px) {
+    font-size: em(32px);
+    height: 450px;
+    padding: 31px 39px;
+  }
+
+  &:before {
+    @include absolute(0, 0, 0, 0);
+    @include wh(100%, 100%);
+    background: {
+      position: center;
+      size: cover;
+    }
+    content: "";
+    display: block;
+    transition: opacity 0.35s ease;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 0.2;
+    }
+
+    p {
+      color: var(--black);
+    }
+  }
+
+  @each $name in $creations {
+    &.#{$name} {
+      &:before {
+        background-image: url(src/assets/images/mobile/image-#{$name}.jpg);
+
+        @include mq(992px) {
+          background-image: url(src/assets/images/desktop/image-#{$name}.jpg);
+        }
+      }
+    }
+  }
+
+  p {
+    color: var(--white);
+    position: relative;
+    text-transform: uppercase;
+    transition: color 0.35s ease;
+    z-index: 1;
+  }
+}

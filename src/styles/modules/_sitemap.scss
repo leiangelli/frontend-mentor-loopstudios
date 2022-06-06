@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.sitemap {
+  display: grid;
+  grid-column: 2 / span 4;
+  list-style: none;
+  font: {
+    family: $SECONDARY_FONT;
+    weight: 400;
+  }
+
+  @include mq(991px, max-width) {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  @include mq(992px) {
+    gap: 32px;
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: start;
+    max-width: 380px;
+  }
+
+  li {
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../abstracts" as *;
+
+button {
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.is-pc {
+  @include mq(991px, max-width) {
+    display: none !important;
+  }
+}
+
+.is-mb {
+  @include mq(992px) {
+    display: none !important;
+  }
+}
+
+$LAYOUT_MARGIN: 24px;
+.l-inner {
+  display: grid;
+  grid-template-columns: #{$LAYOUT_MARGIN} 2.3fr 2.3fr 2.3fr 2.3fr #{$LAYOUT_MARGIN};
+  margin: 0 auto;
+  width: min(calc(1114px + (#{$LAYOUT_MARGIN} * 2)), 100%);
+}

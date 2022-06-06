@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 56px 0 53px;
+  font-size: em(15px);
+
+  @include mq(992px) {
+    padding: 45px 0 47px;
+  }
+
+  .l-inner {
+    @include mq(992px) {
+      row-gap: 24px;
+      padding: 0 1px;
+    }
+  }
+
+  .logo {
+    grid-column: 2 / span 4;
+
+    @include mq(991px, max-width) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
+
+    @include mq(992px) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+  }
+
+  p {
+    grid-column: 2 / span 4;
+    text-align: center;
+    color: var(--gray-200);
+
+    @include mq(992px) {
+      @include relative(2px);
+      grid-column: 4 / span 2;
+      grid-row: 2;
+      text-align: right;
+      font-size: em(17px);
+      letter-spacing: 0.2px;
+    }
+  }
+}

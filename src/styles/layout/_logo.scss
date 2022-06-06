@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+.logo {
+  @include wh(144px, 24px);
+  grid-column-start: 2;
+  background: {
+    image: url(src/assets/images/logo.svg);
+    repeat: no-repeat;
+    size: contain;
+    position: center center;
+  }
+  text-indent: -999px;
+  position: relative;
+  z-index: 9;
+
+  @include mq(992px) {
+    @include wh(192px, 32px);
+  }
+
+  footer & {
+    @include wh(144px, 24px);
+  }
+}

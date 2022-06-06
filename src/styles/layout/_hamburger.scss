@@ -1,0 +1,45 @@
+@use "../abstracts" as *;
+
+.hamburger {
+  @include wh(24px, 16px);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  grid-column-start: 5;
+  justify-content: space-between;
+  margin-left: auto;
+  position: relative;
+  z-index: 2;
+
+  @include mq(992px) {
+    display: none;
+  }
+
+  &.is-active {
+    span {
+      &:first-child {
+        transform: rotate(43deg) translate(4px, 2px);
+      }
+
+      &:nth-child(2) {
+        transform: translateX(200%);
+      }
+
+      &:last-child {
+        transform: rotate(-43deg) translate(8px, -6px);
+      }
+    }
+  }
+
+  &.is-hide {
+    opacity: 0;
+  }
+
+  span {
+    @include wh(100%, 2px);
+    background-color: #fff;
+    position: relative;
+    transform-origin: center;
+    transition: all 0.35s ease;
+  }
+}
