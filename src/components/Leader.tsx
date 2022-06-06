@@ -2,8 +2,8 @@ import React from 'react'
 
 // hooks
 import deviceInfo from 'hooks/device-info'
-import imagePc from './assets/images/desktop/image-interactive.jpg'
-import imageMb from './assets/images/mobile/image-interactive.jpg'
+import imagePc from '@/assets/images/desktop/image-interactive.jpg'
+import imageMb from '@/assets/images/mobile/image-interactive.jpg'
 
 
 function Leader () {
