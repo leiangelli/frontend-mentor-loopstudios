@@ -14,25 +14,25 @@ function Footer () {
         <ul className="social-media">
           <li>
             <a href="#">
-              <img src="src/assets/images/icon-facebook.svg" alt="facebook" />
+              <img src="@/assets/images/icon-facebook.svg" alt="facebook" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="src/assets/images/icon-twitter.svg" alt="twitter" />
+              <img src="@/assets/images/icon-twitter.svg" alt="twitter" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="src/assets/images/icon-pinterest.svg" alt="pinterest" />
+              <img src="@/assets/images/icon-pinterest.svg" alt="pinterest" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="src/assets/images/icon-instagram.svg" alt="instagram" />
+              <img src="@/assets/images/icon-instagram.svg" alt="instagram" />
             </a>
           </li>
         </ul>
