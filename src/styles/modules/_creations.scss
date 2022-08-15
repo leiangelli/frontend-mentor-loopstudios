@@ -148,10 +148,10 @@ $creations: (
   @each $name in $creations {
     &.#{$name} {
       &:before {
-        background-image: url(src/assets/images/mobile/image-#{$name}.jpg);
+        background-image: url(../assets/images/mobile/image-#{$name}.jpg);
 
         @include mq(992px) {
-          background-image: url(src/assets/images/desktop/image-#{$name}.jpg);
+          background-image: url(../assets/images/desktop/image-#{$name}.jpg);
         }
       }
     }
