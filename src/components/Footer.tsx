@@ -3,6 +3,12 @@ import React from 'react'
 // components
 import Sitemap from 'components/Sitemap'
 
+// images
+import facebook from '@/assets/images/icon-facebook.svg'
+import twitter from '@/assets/images/icon-twitter.svg'
+import pinterest from '@/assets/images/icon-pinterest.svg'
+import instagram from '@/assets/images/icon-instagram.svg'
+
 function Footer () {
   return(
     <footer>
@@ -14,25 +20,25 @@ function Footer () {
         <ul className="social-media">
           <li>
             <a href="#">
-              <img src="@/assets/images/icon-facebook.svg" alt="facebook" />
+              <img src={ facebook }  alt="facebook" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="@/assets/images/icon-twitter.svg" alt="twitter" />
+              <img src={ twitter } alt="twitter" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="@/assets/images/icon-pinterest.svg" alt="pinterest" />
+              <img src={ pinterest } alt="pinterest" />
             </a>
           </li>
 
           <li>
             <a href="#">
-              <img src="@/assets/images/icon-instagram.svg" alt="instagram" />
+              <img src={ instagram } alt="instagram" />
             </a>
           </li>
         </ul>
